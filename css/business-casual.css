@@ -1,3 +1,9 @@
+/* color del cuerpo */
+
+body {
+    background-color: #e4f9f5;
+}
+
 h1,
 h2,
 h3,
@@ -69,13 +75,19 @@ p {
     background-color: rgba(255, 255, 255, 0.85);
 }
 
+
+/*color navbar*/
+
 #mainNav {
-    background-color: rgba(56, 90, 33, 0.9);
+    background-color: #1fab89;
     font-family: 'Raleway';
 }
 
+
+/*color texto principal navbar*/
+
 #mainNav .navbar-brand {
-    color: #9ce656;
+    color: #d7fbe8;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -83,8 +95,11 @@ p {
     font-weight: 800;
 }
 
+
+/*texto menu navbar*/
+
 #mainNav .navbar-nav .nav-item.active .nav-link {
-    color: #4b9e37;
+    color: #62d2a2;
 }
 
 @media (min-width: 992px) {
@@ -95,7 +110,7 @@ p {
         color: rgba(255, 255, 255, 0.4);
     }
     #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-        color: #539e3c;
+        color: #62d2a2;
     }
 }
 
@@ -140,7 +155,7 @@ p {
 .cta {
     padding-top: 5rem;
     padding-bottom: 5rem;
-    background-color: rgba(79, 158, 59, 0.9);
+    background-color: #12634f;
 }
 
 .cta .cta-inner {
@@ -212,7 +227,7 @@ p {
 
 .list-hours .list-hours-item.today {
     font-weight: bold;
-    color: #3a9137;
+    color: #275340;
 }
 
 @media (min-width: 992px) {
@@ -227,7 +242,7 @@ p {
 }
 
 .footer {
-    background-color: rgba(47, 23, 15, 0.9);
+    background-color: #173126;
 }
 
 .text-primary {
@@ -243,15 +258,15 @@ p {
 }
 
 .btn-primary {
-    background-color: #287428;
-    border-color: #050805;
+    background-color: #1fab89;
+    border-color: #1fab89;
 }
 
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-    background-color: #df902a;
-    border-color: #df902a;
+    background-color: #11634e;
+    border-color: #11634e;
 }
 
 .font-weight-light {
@@ -271,12 +286,12 @@ p {
 }
 
 a.link {
-    color: #287428;
+    color: #1fab89;
 }
 
 a.link:hover {
     text-decoration: none;
-    color: #56bde6 !important;
+    color: #11634e !important;
 }
 
 .section-content {
