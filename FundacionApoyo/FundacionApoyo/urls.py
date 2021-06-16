@@ -18,7 +18,11 @@ from django.urls import path, include
 from django.conf import settings
 
 urlpatterns = [
+    #path del core
     path('',include('core.urls')),
+    #path de services
+    path('services/', include('services.urls')),
+    #path de admin
     path('admin/', admin.site.urls),
 ]
 
