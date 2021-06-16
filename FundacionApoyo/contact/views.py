@@ -16,7 +16,7 @@ def contact(request):
 
             # Creamos el correo
             email = EmailMessage(
-                "La Caffettiera: Nuevo mensaje de contacto",
+                "Fundación Apoyo: Nuevo mensaje de contacto",
                 "De {} <{}>\n\nEscribió:\n\n{}".format(name, email, content),
                 "no-contestar@inbox.mailtrap.io",
                 ["django@hektorprofe.net"],
