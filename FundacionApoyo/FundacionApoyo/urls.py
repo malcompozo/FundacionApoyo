@@ -27,6 +27,10 @@ urlpatterns = [
     path('contact/',include('contact.urls')),
     #path de admin
     path('admin/', admin.site.urls),
+    #path de la autenticación
+    path('accounts/', include('django.contrib.auth.urls')),
+    #path del registro
+    path('accounts/', include('registration.urls')),
 ]
 
 if settings.DEBUG:
