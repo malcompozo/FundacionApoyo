@@ -13,9 +13,5 @@ def blog(request):
     return render(request, "core/blog.html")
 
     # llamada al fichero
-def contact(request):
-    return render(request, "core/contact.html")
-
-    # llamada al fichero
 def visit_us(request):
     return render(request, "core/visit_us.html")
