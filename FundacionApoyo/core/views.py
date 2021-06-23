@@ -31,15 +31,14 @@ def nueva_ficha(request):
     
 # agregar
 def agregar(request):
-    datos = {'form':PersonaForm()}
     if request.method == 'POST':
-        formulario = PersonaForm(request.POST)
-        if formulario.is_valid:
-            formulario.save()
+        form = PersonaForm(request.POST)
+        if form.is_valid:
+            form.save()
             return redirect('blog')
     else:
-        formulario = PersonaForm()
-    return render(request, 'core/nueva_ficha.html', datos)
+        form = PersonaForm()
+    return render(request, 'core/nueva_ficha.html',{'form':form})
 
 # eliminar
 def eliminar(request, persona_id):
@@ -57,4 +56,4 @@ def editar(request, persona_id):
             return redirect('blog')
     else:
         form = PersonaForm(instance=persona)
-    return render(request, 'core/nueva_ficha.html',{'form':form})
+    return render(request, 'core/editar.html',{'form':form})

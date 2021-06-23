@@ -1,6 +1,6 @@
 {% extends 'core/base.html' %} 
 {% load static %} 
-{% block title %}Nueva ficha{% endblock %} 
+{% block title %}Editar{% endblock %} 
 
 {% block content %}
 
@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-xl-9 mx-auto">
                     <div class="cta-innerv text-center rounded">
-                        <form method="POST" id="formulario">
+                    <form method="POST" id="formulario">
                             {% csrf_token %}
                             <h1>Editar perfil</h1>
                             
@@ -19,17 +19,22 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="problema">problema</label>
+                                <label for="fecha">Fecha</label>
+                                <div>{{form.fecha}}</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="problema">Problema</label>
                                 <div>{{form.problema}}</div>
                             </div>
 
                             <div class="form-group">
-                                <label for="vacunaciones">vacunaciones</label>
+                                <label for="vacunaciones">Vacunaciones</label>
                                 <div>{{form.vacunaciones}}</div>
                             </div>
 
                             <div class="form-group">
-                                <label for="descripcion">descripcion</label><br>
+                                <label for="descripcion">Descripcion</label><br>
                                 <div>{{form.descripcion}}</div>
                             </div>
 
