@@ -55,10 +55,17 @@
                     <li class="nav-item px-lg-4 {% if request.path == '/contact/' %}active{% endif %}">
                         <a class="nav-link text-uppercase text-expanded" href="{% url 'contact' %}">Contacto</a>
                     </li>
-                    <li class="nav-item px-lg-4 {% if request.path == '/blog/' %}active{% endif %}">
-                        <a class="nav-link text-uppercase text-expanded" href="{% url 'blog' %}">Blog</a>
-                    </li>
                 </ul>
+                <div>
+                    <!-- SI EL USUARIO ESTA LOGEADO MOSTRARA ESTA OPCIÓN -->
+                    {% if request.user.is_staff %}
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item {% if request.path == '/blog/' %} active {% endif %}">
+                            <a class="nav-link font-weight-bold" href="{% url 'blog' %}">Fichas médicas</a>
+                        </li>
+                    </ul>
+                    {% endif %}
+                </div>
                 <ul class="navbar-nav">
                     {% if not request.user.is_authenticated %}
                         <li class="nav-item">
@@ -77,8 +84,10 @@
         </div>
     </nav>
 
-    <!-- Contenido de la página -->
-    {% block content %} {% endblock %}
+    <!-- CONTENIDO DE LA PAGINA -->
+    <div class="content">
+        {% block content %} {% endblock content %}
+    </div>
 
     <!-- Pié de página -->
     <footer class="footer text-faded text-center py-5">
