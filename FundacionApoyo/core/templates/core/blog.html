@@ -8,9 +8,11 @@
     <div class="container col-12">
         <h2 class="mt-5">Fichas de pacientes activos</h2>
 
+        {% comment "" %}
         <div class="intro-button mx-auto">
             <a class="btn btn-success btn-xl" href="{% url 'nueva_ficha' %}">+ Nueva ficha</a>
         </div>
+        {% endcomment %} 
 
         <table id="gestion-obras-tabla" class="table table-striped table-bordered table-sm" cellspacing="0"
             width="100%">
