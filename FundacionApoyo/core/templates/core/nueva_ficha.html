@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %} 
+{% load static %} 
+{% block title %}Nueva ficha{% endblock %} 
+
+{% block content %}
+
+<section class="page-section cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-innerv text-center rounded">
+                    <form action = "" method = "post" id="formulario">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            {{ form.as_table }}
+                        </div>
+                        <input type="submit" class="btn btn-success" id="enviar" value="Enviar">
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+{% endblock content %}
