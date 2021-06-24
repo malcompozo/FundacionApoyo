@@ -27,8 +27,8 @@
                 </tr>
             </thead>
             <tbody>
+            {% for blog in blog %}
                 <tr class="gestion-obras-fila">
-                {% for blog in blog %}
                     <td>
                         <div class="btn-group">
                             <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"
@@ -47,10 +47,8 @@
                         <td>{{blog.problema}}</td>
                         <td>{{blog.vacunaciones}}</td>
                         <td>{{blog.descripcion}}</td>
-                {% endfor %}
-                    
                 </tr>
-
+            {% endfor %}
             </tbody>
         </table>
     </div>
