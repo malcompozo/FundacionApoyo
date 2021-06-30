@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %} 
+{% load static %} 
+{% block title %}Formulario{% endblock %} 
+
+{% block content %}
+
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-innerv text-center rounded">
+                    <form method="POST" id="formulario">
+                        {% csrf_token %}
+                        <h1>Formulario de donaciones</h1>
+                            <div class="form-group">
+                                        <label for="nombre">Nombre</label>
+                                        <div>{{form.nombre}}</div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="fecha">Donacion</label>
+                                        <div>{{form.donacion}}</div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="problema">Descripcion (opcional)</label>
+                                        <div>{{form.descripcion}}</div>
+                                    </div>
+                                <div class="col-md-12 mt-4 mb-3">
+                                    <a class="btn btn-success" href="{% url 'services' %}">¿En que nos ayuda tu donación?</a>
+                                    <input type="submit" class="btn btn-danger" values="Enviar">
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

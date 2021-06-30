@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
-from .models import Personas
-from .forms import PersonaForm
+from .models import Donacion, Personas, Suma
+from .forms import PersonaForm, DonacionForm
 
 # llamada al fichero
 def index(request):
@@ -28,8 +28,19 @@ def nueva_ficha(request):
     return render(request, "core/nueva_ficha.html")
 
     # CRUD
+
+    # agregar formulario de donacion
+def formulario(request):
+    if request.method == 'POST':
+        form = DonacionForm(request.POST)
+        if form.is_valid:
+            form.save()
+            return redirect('donacion')
+    else:
+        form = DonacionForm()
+    return render(request, "core/formulario.html",{'form':form})
     
-# agregar
+# agregar personas
 def agregar(request):
     if request.method == 'POST':
         form = PersonaForm(request.POST)
@@ -57,3 +68,6 @@ def editar(request, persona_id):
     else:
         form = PersonaForm(instance=persona)
     return render(request, 'core/editar.html',{'form':form})
+
+    
+    
